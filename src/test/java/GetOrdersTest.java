@@ -9,14 +9,14 @@ public class GetOrdersTest {
     private OrderClient orderClient;
 
     //Тест не дописан
-    @Test
-    public void getOrders(){
-        ValidatableResponse response = orderClient.get();
-
-        int responseCode = response.extract().statusCode();
-        assertEquals("Status code incorrect", SC_OK, responseCode);
+//    @Test
+//    public void getOrders(){
+//        ValidatableResponse response = orderClient.get();
+//
+//        int responseCode = response.extract().statusCode();
+//        assertEquals("Status code incorrect", SC_OK, responseCode);
 
 //        courierId = loginResponse.extract().path("id");
 //        assertNotNull("Id was not received", courierId);
-    }
+//    }
 }
