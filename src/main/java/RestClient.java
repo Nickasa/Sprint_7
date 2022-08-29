@@ -12,11 +12,4 @@ public class RestClient {
                     .setBaseUri(BASE_URL)
                     .build();
         }
-            //Требуется доработка
-//        public RequestSpecification getOrderSpec() {
-//            return new RequestSpecBuilder()
-//                    .setContentType(ContentType.JSON)
-//                    .setBaseUri(BASE_URL)
-//                    .build();
-//        }
 }
