@@ -16,7 +16,7 @@ public class OrderClient extends RestClient{
                 .then();
     }
 
-    @Step("Create new courier {courier}")
+    @Step("Get order list")
     public ValidatableResponse get() {
         return given()
                 .spec(getBaseSpec())

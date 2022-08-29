@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -26,6 +27,7 @@ public class LoginCourierTest {
     }
 
     @Test
+    @DisplayName("Check courier login and response code/body")
     public void courierCanLogin() {
         ValidatableResponse response = courierClient.create(courier);
 
@@ -46,6 +48,7 @@ public class LoginCourierTest {
 
     //Проверка входа с частично заполненными полями
     @Test
+    @DisplayName("Check login attempt with missing credentials and response code/body")
     public void courierLoginWithWrongCredentials() {
         courierLoginWithoutCredentials = CourierGenerator.getEmptyCredentials();
         courierLoginWithoutLogin = CourierGenerator.getWithoutLogin();
@@ -98,6 +101,7 @@ public class LoginCourierTest {
 
     //Логин с несуществующими учетными данными
     @Test
+    @DisplayName("Check login attempt with not existing credentials and response code/body")
     public void loginWithNotExistingCredentials() {
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(courier));
 

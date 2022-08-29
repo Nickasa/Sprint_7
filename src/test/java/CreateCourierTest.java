@@ -1,3 +1,4 @@
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
@@ -27,6 +28,7 @@ public class CreateCourierTest {
     }
 
     @Test
+    @DisplayName("Check courier can be created and response code/body")
     public void courierCanBeCreated () {
         ValidatableResponse response = courierClient.create(courier);
 
@@ -45,6 +47,7 @@ public class CreateCourierTest {
 
     //Тест на создание курьера
     @Test
+    @DisplayName("Check courier cannot be created and response code/body")
     public void createExistingCourier() {
         ValidatableResponse response = courierClient.create(courier);
 
